@@ -6,8 +6,8 @@ import pandas as pd
 with st.sidebar:
     umls_api_key = st.text_input("UMLS API Key", key="umls_api_key", type="password")
     "[Get an UMLS API key](https://uts.nlm.nih.gov/uts/login)"
-    "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
-    "[![Open in GitHub](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
+    "[View the source code](https://github.com/k4der2rg/umls-mapper)"
+    "[![Open in GitHub](https://github.com/codespaces/badge.svg)](https://github.com/k4der2rg/umls-mapper)"
 
 st.title("🔗 Terminology Mapping")
 st.caption("🚀 A terminology mapper engine powered by UMLS ontology")
