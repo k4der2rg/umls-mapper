@@ -6,7 +6,7 @@ class UMLSClient:
     def __init__(self, api_key):
         self.api_key = api_key
 
-    def get_cui_list(self, string):
+    def get_cui_list(self, string, sourceVocabId = ''):
         """ 
         Returns an orderded list of most relevent CUI that correspond to the code or term passed. 
         :param string: Any term or code in the UMLS. 
@@ -17,9 +17,14 @@ class UMLSClient:
             if not self.api_key:
                 raise Exception('Client is not authenticated')
             url = 'https://uts-ws.nlm.nih.gov/search/current'
-            params = {'apiKey': self.api_key, 'string': string}
+            params = {'apiKey': self.api_key, 'string': string, 'sabs':sourceVocabId}
             response = requests.get(url, params=params)
-            return format_cui_results(response.json())
+            print(response)
+            print('-----------')
+            if response.status_code != 200:
+                return []
+            else:
+                return format_cui_results(response.json())
         except Exception as e:
             # Handle exceptions (e.g., connection errors, timeouts)
             return str(e)
@@ -37,7 +42,10 @@ class UMLSClient:
             url = 'https://uts-ws.nlm.nih.gov/rest/content/current/CUI/' + cui
             params = {'apiKey': self.api_key}
             response = requests.get(url, params=params)
-            return response.json()['result']
+            if response.status_code != 200:
+                return []
+            else:
+                return response.json()['result']
         except Exception as e:
             # Handle exceptions (e.g., connection errors, timeouts)
             return str(e)
@@ -58,9 +66,11 @@ class UMLSClient:
             params = {'apiKey': self.api_key, 'targetSource': targetVocabId}
 
             response = requests.get(url, params=params)
-
-            cuis_list = format_mapping_results(response.json())
-            return cuis_list
+            if response.status_code != 200:
+                return []
+            else: 
+                cuis_list = format_mapping_results(response.json())
+                return cuis_list
         except Exception as e:
             # Handle exceptions (e.g., connection errors, timeouts)
             return str(e)
@@ -81,7 +91,7 @@ class UMLSClient:
             params = {'apiKey': self.api_key, 'language':lang, 'sabs': VocabId}
 
             response = requests.get(url, params=params)
-            if response.status_code == 404:
+            if response.status_code != 200:
                 return []
                 #error_message = handle_api_error(response)
                 #raise Exception(error_message)

@@ -13,29 +13,24 @@ st.title("🔗 Terminology Mapping")
 st.caption("🚀 A terminology mapper engine powered by UMLS ontology")
 st.session_state["messages"] = [{"role": "assistant", "content": "Please enter the term you want to map and select to which terminology you want to map to?"}]
 
-for msg in st.session_state.messages:
-    st.chat_message(msg["role"]).write(msg["content"])
-
 with st.form("my_form"):
     text = st.text_area("")
-    targetVocab_text = st.selectbox("Select a state", vocab_list.values()).strip()
+    targetVocab_text = st.selectbox("Select a terminology", vocab_list.values()).strip()
     submitted = st.form_submit_button("Submit")
 
     if not umls_api_key:
         st.info("Please add your UMLS API key to continue.")
     elif submitted:
-        print(text)
         targetVocab = [k for k, v in vocab_list.items() if v == targetVocab_text][0]
         umls_client = UMLSClient(umls_api_key)
         cui_list = umls_client.get_cui_list(text)
         cui = cui_list[0]['ui']
         atoms = umls_client.get_atoms_list(cui,targetVocab)
-        #sourceVocab = atoms[0]['rootSource']
+        #sourceVocab = atoms[0]['Vocabulary ID']
         #sourceCode = atoms[0]['code']
         #mappings = umls_client.get_mapping(sourceCode,sourceVocab,targetVocab)
-        print("------------------------")
         if len(atoms) == 0:
-            st.info("No mappings found, try again with another terminology!")
+            st.info("No mappings found in - "+ targetVocab_text +". Try again with another terminology!", icon="ℹ️")
         else:
             mappings_df = pd.DataFrame.from_dict(atoms)
             #mappings_df.rename(columns={'rootSource': 'Vocabulary ID'}, inplace=True)
