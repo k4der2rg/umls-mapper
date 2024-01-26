@@ -1,0 +1,108 @@
+"RSAB","SSN"
+AIR,AI/RHEUM
+ALT,Alternative Billing Concepts
+AOD,Alcohol and Other Drug Thesaurus
+AOT,Authorized Osteopathic Thesaurus
+ATC,Anatomical Therapeutic Chemical Classification System
+BI,Beth Israel Problem List
+CCC,Clinical Care Classification
+CCPSS,Clinical Problem Statements
+CCS,Clinical Classifications Software
+CCSR_ICD10CM,Clinical Classifications Software Refined for ICD-10-CM
+CCSR_ICD10PCS,Clinical Classifications Software Refined for ICD-10-PCS
+CDCREC,Race & Ethnicity - CDC
+CDT,CDT
+CHV,Consumer Health Vocabulary
+COSTAR,COSTAR
+CPM,Medical Entities Dictionary
+CPT,CPT - Current Procedural Terminology
+CSP,CRISP Thesaurus
+CST,COSTART
+CVX,Vaccines Administered
+DDB,Diseases Database
+DRUGBANK,DrugBank
+DSM-5,"Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition"
+DXP,DXplain
+FMA,Foundational Model of Anatomy
+GO,Gene Ontology
+GS,Gold Standard Drug Database
+HCDT,CDT in HCPCS
+HCPCS,HCPCS - Healthcare Common Procedure Coding System
+HCPT,CPT in HCPCS
+HGNC,HUGO Gene Nomenclature Committee
+HL7V2.5,HL7 Version 2.5
+HL7V3.0,HL7 Version 3.0
+HPO,Human Phenotype Ontology
+ICD10AE,"ICD-10, American English Equivalents"
+ICD10AMAE,"ICD-10, Australian Modification, Americanized English Equivalents"
+ICD10AM,"ICD-10, Australian Modification"
+ICD10CM,"International Classification of Diseases, Tenth Revision, Clinical Modification"
+ICD10PCS,ICD-10 Procedure Coding System
+ICD10,"International Classification of Diseases and Related Health Problems, Tenth Revision"
+ICD10,ICD-10
+ICD9CM,ICD-9-CM
+ICD9CM,"International Classification of Diseases, Ninth Revision, Clinical Modification"
+ICF-CY,"International Classification of Functioning, Disability and Health for Children and Youth"
+ICF,"International Classification of Functioning, Disability and Health"
+ICNP,International Classification for Nursing Practice
+ICPC2EENG,"International Classification of Primary Care, 2nd Edition, Electronic"
+ICPC2ICD10ENG,ICPC2-ICD10 Thesaurus
+ICPC2P,ICPC-2 PLUS
+ICPC,International Classification of Primary Care
+JABL,Congenital Mental Retardation Syndromes
+LCH,Library of Congress Subject Headings
+LCH_NW,"Library of Congress Subject Headings, Northwestern University subset"
+LNC,LOINC
+MCM,Glossary of Clinical Epidemiologic Terms
+MDR,MedDRA
+MED-RT,Medication Reference Terminology
+MEDCIN,MEDCIN
+MEDLINEPLUS,MedlinePlus Health Topics
+MMSL,Multum
+MMX,Micromedex
+MSH,MeSH
+MTH,Metathesaurus Names
+MTHCMSFRF,Metathesaurus CMS Formulary Reference File
+MTHICD9,ICD-9-CM Entry Terms
+MTHICPC2EAE,ICPC2E American English Equivalents
+MTHICPC2ICD10AE,"ICPC2E-ICD10 Thesaurus, American English Equivalents"
+MTHMST,Minimal Standard Terminology (UMLS)
+MTHSPL,FDA Structured Product Labels
+MVX,Manufacturers of Vaccines
+NANDA-I,NANDA-I Taxonomy
+NCBI,NCBI Taxonomy
+NCI,NCI Thesaurus
+NDDF,FDB MedKnowledge
+NEU,Neuronames Brain Hierarchy
+NIC,Nursing Interventions Classification
+NOC,Nursing Outcomes Classification
+NUCCHCPT,National Uniform Claim Committee - Health Care Provider Taxonomy
+OMIM,Online Mendelian Inheritance in Man
+OMS,Omaha System
+ORPHANET,ORPHANET
+PCDS,Patient Care Data Set
+PDQ,Physician Data Query
+PNDS,Perioperative Nursing Data Set
+PPAC,Pharmacy Practice Activity Classification
+PSY,Psychological Index Terms
+QMR,Quick Medical Reference
+RAM,Clinical Concepts by R A Miller
+RCD,Read Codes
+RCDAE,Read Codes Am Engl
+RCDSA,Read Codes Am Synth
+RCDSY,Read Codes Synth
+RXNORM,RXNORM
+SNM,SNOMED 1982
+SNMI,SNOMED Intl 1998
+SNOMEDCT_US,"SNOMED CT, US Edition"
+SNOMEDCT_VET,"SNOMED CT, Veterinary Extension"
+SOP,Source of Payment Typology
+SPN,Standard Product Nomenclature
+SRC,Source Terminology Names (UMLS)
+ULT,UltraSTAR
+UMD,UMDNS
+USPMG,USP Model Guidelines
+USP,USP Compendial Nomenclature
+UWDA,Digital Anatomist
+VANDF,National Drug File
+WHO,WHOART
