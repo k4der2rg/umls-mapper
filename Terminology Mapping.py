@@ -26,18 +26,12 @@ with st.form("my_form"):
         cui_list = umls_client.get_cui_list(text)
         cui = cui_list[0]['ui']
         atoms = umls_client.get_atoms_list(cui,targetVocab)
-        #sourceVocab = atoms[0]['Vocabulary ID']
-        #sourceCode = atoms[0]['code']
-        #mappings = umls_client.get_mapping(sourceCode,sourceVocab,targetVocab)
         if len(atoms) == 0:
             st.info("No mappings found in - "+ targetVocab_text +". Try again with another terminology!", icon="ℹ️")
         else:
             mappings_df = pd.DataFrame.from_dict(atoms)
-            #mappings_df.rename(columns={'rootSource': 'Vocabulary ID'}, inplace=True)
-
             vocab_list_df = pd.DataFrame.from_dict(vocab_list, orient='index').reset_index()
             vocab_list_df.columns = ['Vocabulary ID','Vocabulary Name']
-
             results = pd.merge(mappings_df, vocab_list_df, how="inner", on=['Vocabulary ID', 'Vocabulary ID'])
             st.dataframe(results)
         

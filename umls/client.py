@@ -77,11 +77,10 @@ class UMLSClient:
         
     def get_atoms_list(self, cui ,VocabId, lang = 'ENG'):
         """ 
-        Returns an list of the mapping of CUI in the vocabulary vocab. 
+        Returns an list of the atoms of CUI in the vocabulary VocabId. 
         :param code: UMLS concept unique indentifier. 
-        :param sourceVocabId: Source vocavulary identifier from the UMLS ontology 
-        :param targetVocabId: Target vocavulary identifier from the UMLS ontology
-        :return: Formatted list of mappings. 
+        :param VocabId: Vocavulary identifier from the UMLS ontology 
+        :return: Formatted list of atoms. 
         """
 
         try:

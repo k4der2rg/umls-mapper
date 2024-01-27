@@ -1,6 +1,6 @@
 def format_cui_results(data):
     """
-    Formats the getcui results data from UMLS API for better readability.
+    Formats the get_cui_list results data from UMLS API for better readability.
     :param data: The raw data from UMLS API response.
     :return: Formatted data.
     """
@@ -16,7 +16,7 @@ def format_cui_results(data):
 
 def format_atom_results(data):
     """
-    Formats the getcui results data from UMLS API for better readability.
+    Formats the get_atoms_list results data from UMLS API for better readability.
     :param data: The raw data from UMLS API response.
     :return: Formatted data.
     """
@@ -35,7 +35,7 @@ def format_atom_results(data):
 
 def format_mapping_results(data):
     """
-    Formats the getcui results data from UMLS API for better readability.
+    Formats the get_mapping results data from UMLS API for better readability.
     :param data: The raw data from UMLS API response.
     :return: Formatted data.
     """
@@ -48,9 +48,3 @@ def format_mapping_results(data):
             })
     return formatted_data
 
-
-def handle_api_error(response):
-    if response.status_code == 404:
-        return []
-    else:
-        return "Error_message: "+str(response.status_code)
