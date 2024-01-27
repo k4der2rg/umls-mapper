@@ -1,4 +1,4 @@
-# 🎈 Terminology Mapper
+# 🔗 Terminology Mapper
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://symmetrical-spork-4qw5gxqxqgghjqj9.github.dev/)
 
